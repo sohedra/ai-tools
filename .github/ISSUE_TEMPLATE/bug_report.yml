@@ -1,0 +1,29 @@
+name: Bug report
+description: Something in a plugin or skill does not work as expected
+labels: [bug]
+body:
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin
+      description: Which plugin?
+    validations:
+      required: true
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Tool
+      options: [Claude Code, Codex, pi, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got. Include the prompt and relevant output.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Plugin and tool versions

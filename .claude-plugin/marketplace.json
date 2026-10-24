@@ -1,0 +1,6 @@
+{
+  "name": "sohedra",
+  "description": "Sohedra's AI tools: plugins for Claude Code, Codex and pi.",
+  "owner": { "name": "Sohedra", "url": "https://sohedra.com" },
+  "plugins": []
+}

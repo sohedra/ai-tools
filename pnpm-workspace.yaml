@@ -1,0 +1,5 @@
+packages:
+  - plugins/*
+blockExoticSubdeps: true
+engineStrict: true
+minimumReleaseAge: 2880

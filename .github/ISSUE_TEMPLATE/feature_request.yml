@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest a new plugin, skill or improvement
+labels: [enhancement]
+body:
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin
+      description: Existing plugin name, or "new plugin".
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposed solution

@@ -1,0 +1,49 @@
+{
+  "name": "@sohedra/ai-tools",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Sohedra AI tools monorepo: plugins for Claude Code, Codex and pi.",
+  "keywords": [
+    "pi-package"
+  ],
+  "homepage": "https://github.com/sohedra/ai-tools",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohedra/ai-tools.git"
+  },
+  "type": "module",
+  "scripts": {
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "validate": "node scripts/validate.mjs",
+    "check": "pnpm format:check && pnpm validate && pnpm test",
+    "test": "node --test \"scripts/**/*.test.mjs\""
+  },
+  "devDependencies": {
+    "oxfmt": "0.74.0",
+    "yaml": "2.9.1"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.21.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.14.0",
+  "pi": {
+    "extensions": [
+      "./plugins/*/extensions"
+    ],
+    "skills": [
+      "./plugins/*/skills"
+    ],
+    "prompts": [
+      "./plugins/*/prompts/*.md"
+    ],
+    "themes": [
+      "./plugins/*/themes/*.json"
+    ]
+  }
+}
